@@ -7,25 +7,106 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; color: #222; background: #fff; line-height: 1.6; }
-    header { background: #fff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
-    header h1 { font-size: 1.5rem; color: #111; }
+    body { font-family: 'Inter', sans-serif; color: #222; background: #fff; line-height: 1.6; overflow-x: hidden; }
+    header { background: #fff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+    header h1 {
+      font-size: 2rem;
+      color: #111;
+      animation: float 4s ease-in-out infinite;
+    }
     nav a { margin-left: 20px; color: #555; text-decoration: none; font-weight: 500; }
     nav a:hover { color: #000; }
-    .hero { padding: 80px 40px; background: #f7f7f7; text-align: center; }
-    .hero h2 { font-size: 2.5rem; margin-bottom: 20px; }
-    .hero p { font-size: 1.2rem; color: #555; }
-    .section { padding: 60px 40px; max-width: 1200px; margin: auto; }
-    .section h3 { font-size: 2rem; margin-bottom: 30px; text-align: center; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-    .card { background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: 0.3s; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
-    .card h4 { margin-bottom: 10px; font-size: 1.25rem; }
-    .card p { color: #555; font-size: 0.95rem; }
-    .about { text-align: center; max-width: 800px; margin: auto; color: #555; }
-    .contact { text-align: center; background: #f1f1f1; padding: 40px; }
-    .contact a { display: inline-block; margin-top: 10px; font-weight: 600; color: #0070f3; text-decoration: none; }
-    footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #aaa; }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+    .hero {
+      padding: 100px 40px;
+      background: linear-gradient(135deg, #e9f0ff, #ffffff);
+      text-align: center;
+      position: relative;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #0070f3, #00c6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+    .hero p { font-size: 1.3rem; color: #444; }
+    .hero img {
+      margin-top: 40px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .section { padding: 80px 40px; max-width: 1200px; margin: auto; }
+    .section h3 { font-size: 2.2rem; margin-bottom: 50px; text-align: center; position: relative; }
+    .section h3::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #0070f3;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    .card h4 { margin-bottom: 15px; font-size: 1.3rem; color: #0070f3; }
+    .card p { color: #555; font-size: 1rem; }
+    .card a {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #0070f3;
+    }
+    .about {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .contact {
+      text-align: center;
+      background: #f1f1f1;
+      padding: 60px 20px;
+    }
+    .contact a {
+      display: inline-block;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #0070f3;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
@@ -39,8 +120,9 @@
   </header>
 
   <section class="hero">
-    <h2>AI-Powered Business Tools for Swiss Companies</h2>
-    <p>We develop intelligent tools to boost revenue, cut costs, and automate operations – with Swiss precision and trust.</p>
+    <h2>Swiss-Made AI Tools That Work</h2>
+    <p>Boost productivity, automate communication, and grow smarter – with AiMove’s powerful AI solutions.</p>
+    <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284" alt="AI concept" />
   </section>
 
   <section class="section" id="services">
@@ -48,42 +130,47 @@
     <div class="services">
       <div class="card">
         <h4>Voice AI Agent</h4>
-        <p>AI voice assistant that handles inbound/outbound calls, appointment booking, and customer support – just like a real team member.</p>
+        <p>AI voice assistant for call handling, appointment setting, and real-time client service.</p>
+        <a href="#">View Details →</a>
       </div>
       <div class="card">
         <h4>Virtual AI Employee</h4>
-        <p>Automated assistant that handles routine tasks: Excel reports, presentations, analysis, and admin – fully integrated into your workflows.</p>
+        <p>Automates your internal tasks: reports, documents, presentations & research.</p>
+        <a href="#">View Details →</a>
       </div>
       <div class="card">
         <h4>Email AI CRM</h4>
-        <p>AI that understands your business and replies to client emails automatically with smart, personalized answers – fully trainable.</p>
+        <p>Let AI handle your inbox. Smart, personalized replies based on your company data.</p>
+        <a href="#">View Details →</a>
       </div>
       <div class="card">
-        <h4>Social Media Management</h4>
-        <p>Plan, post, and manage all your content with AI support – keeping your brand visible while saving your team time.</p>
+        <h4>Social Media & Ads</h4>
+        <p>AI-powered social scheduling, Google ad automation & growth strategies.</p>
+        <a href="#">View Details →</a>
       </div>
       <div class="card">
-        <h4>Google Ads & SEO</h4>
-        <p>Automated campaign building & SEO optimization that actually converts – designed for measurable ROI.</p>
+        <h4>SEO & Content</h4>
+        <p>Rank higher & convert better with smart SEO, blogs, and optimized pages.</p>
+        <a href="#">View Details →</a>
       </div>
     </div>
   </section>
 
   <section class="section" id="about">
-    <h3>About Us</h3>
+    <h3>About AiMove</h3>
     <p class="about">
-      AiMove is a Swiss-based AI agency combining tech innovation with business logic. We work closely with business owners and marketing teams to deploy cost-saving, revenue-driving tools – fast and with full transparency. Our solutions are modular, secure, and customized to your company’s needs.
+      We are a Swiss AI solutions studio focused on quality, trust and measurable results. Our team combines local business insight with cutting-edge automation to build tools that generate value from day one. We're not hype – we're results.
     </p>
   </section>
 
   <section class="contact" id="contact">
-    <h3>Get in Touch</h3>
-    <p>Interested in a custom AI tool or digital strategy for your business?</p>
-    <a href="mailto:hello@aimove.ch">Contact us → hello@aimove.ch</a>
+    <h3>Contact Us</h3>
+    <p>Need a custom AI strategy? Let's talk.</p>
+    <a href="mailto:hello@aimove.ch">Email: hello@aimove.ch</a>
   </section>
 
   <footer>
-    &copy; 2025 AiMove – Swiss AI Development & Automation
+    &copy; 2025 AiMove – Swiss AI Development. All rights reserved.
   </footer>
 </body>
 </html>

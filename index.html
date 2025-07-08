@@ -3,89 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AiMove – AI Solutions for Business</title>
+    <title>AiMove – Premium AI Agentur</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+    </style>
   </head>
-  <body class="bg-black text-white font-sans">
+  <body class="bg-black text-white">
     <!-- Navigation -->
-    <header class="bg-zinc-900 border-b border-zinc-700 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-violet-400">AiMove</h1>
-        <nav class="space-x-4">
-          <a href="#services" class="hover:text-violet-300">Services</a>
-          <a href="#about" class="hover:text-violet-300">Über uns</a>
-          <a href="#contact" class="hover:text-violet-300">Kontakt</a>
-          <select id="lang-switch" class="bg-zinc-800 border border-zinc-600 text-white px-2 py-1 rounded">
-            <option value="de">DE</option>
-            <option value="en">EN</option>
-          </select>
+    <header class="bg-[#0e0e0e] border-b border-[#333] sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <h1 class="text-2xl font-bold text-violet-400 animate-bounce">AiMove</h1>
+        <nav class="space-x-6">
+          <a href="#services" class="text-white hover:text-violet-300">Services</a>
+          <a href="#about" class="text-white hover:text-violet-300">Über uns</a>
+          <a href="#contact" class="text-white hover:text-violet-300">Kontakt</a>
         </nav>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="text-center py-24 bg-gradient-to-b from-black via-zinc-900 to-zinc-800">
-      <h2 class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-pink-500">
-        KI-Lösungen für Schweizer Unternehmen
-      </h2>
-      <p class="mt-6 text-xl text-zinc-300 max-w-2xl mx-auto">
-        Wir entwickeln & integrieren AI-Systeme, die Zeit sparen, Kunden gewinnen & Ihre Prozesse automatisieren.
-      </p>
+    <section class="bg-gradient-to-b from-black to-[#1a1a1a] py-24 text-center px-6">
+      <h2 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500">AI, die verkauft und automatisiert</h2>
+      <p class="mt-6 text-lg text-gray-300 max-w-3xl mx-auto">Wir bauen AI-Systeme, die sprechen, schreiben, werben & verkaufen – für KMUs, Agenturen und Dienstleister in der Schweiz.</p>
+      <div class="mt-10 flex justify-center gap-4">
+        <a href="#contact" class="bg-violet-600 hover:bg-violet-700 text-white px-6 py-3 rounded-full font-medium">Jetzt Kontakt aufnehmen</a>
+        <a href="#services" class="text-violet-400 font-medium underline underline-offset-4">Services ansehen</a>
+      </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
-      <h3 class="text-3xl font-semibold text-center mb-12 text-violet-400">Unsere Leistungen</h3>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-zinc-800 p-6 rounded-2xl shadow-xl hover:scale-105 transition">
-          <h4 class="text-xl font-bold mb-3 text-violet-300">📞 Voice AI Agent</h4>
-          <p class="text-zinc-300 mb-4">Automatisierte Telefonannahme mit natürlicher Sprache.</p>
-          <a href="#" class="text-violet-400 font-semibold hover:underline">Mehr erfahren →</a>
+    <!-- Why AiMove Section -->
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-center text-violet-400 mb-10">Warum AiMove?</h3>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-5xl mb-4">⚙️</div>
+          <h4 class="text-xl font-semibold">Automatisiert & Skaliert</h4>
+          <p class="text-gray-400 mt-2">Unsere AI-Systeme laufen 24/7 und sparen hunderte Arbeitsstunden.</p>
         </div>
-        <div class="bg-zinc-800 p-6 rounded-2xl shadow-xl hover:scale-105 transition">
-          <h4 class="text-xl font-bold mb-3 text-violet-300">🧑‍💻 Virtual AI Employee</h4>
-          <p class="text-zinc-300 mb-4">Erstellt Reports, fasst PDFs zusammen & automatisiert Aufgaben.</p>
-          <a href="#" class="text-violet-400 font-semibold hover:underline">Mehr erfahren →</a>
+        <div>
+          <div class="text-5xl mb-4">💬</div>
+          <h4 class="text-xl font-semibold">Klingt wie ein Mensch</h4>
+          <p class="text-gray-400 mt-2">Stimme, Tonfall & Texte wirken wie echte Mitarbeiter – trainiert auf Sie.</p>
         </div>
-        <div class="bg-zinc-800 p-6 rounded-2xl shadow-xl hover:scale-105 transition">
-          <h4 class="text-xl font-bold mb-3 text-violet-300">💌 Email AI Assistant</h4>
-          <p class="text-zinc-300 mb-4">Beantwortet Mails im Ton Ihres Unternehmens vollautomatisch.</p>
-          <a href="#" class="text-violet-400 font-semibold hover:underline">Mehr erfahren →</a>
+        <div>
+          <div class="text-5xl mb-4">📈</div>
+          <h4 class="text-xl font-semibold">Steigert Umsatz & Leads</h4>
+          <p class="text-gray-400 mt-2">Unsere Kunden steigern mit AI ihre Conversion-Raten & gewinnen Kunden.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-[#111] py-24 px-6">
+      <h3 class="text-3xl font-bold text-center text-violet-400 mb-16">Unsere AI Services</h3>
+      <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-violet-500/30 transition">
+          <h4 class="text-xl font-bold text-violet-300 mb-2">📞 Voice AI Agent</h4>
+          <p class="text-gray-400">24/7 Telefonassistent: Termine, Weiterleitungen, Infos.</p>
+          <a href="voice.html" class="text-violet-400 mt-4 block font-medium hover:underline">Mehr erfahren →</a>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-violet-500/30 transition">
+          <h4 class="text-xl font-bold text-violet-300 mb-2">💼 Virtual AI Employee</h4>
+          <p class="text-gray-400">Erstellt Berichte, fasst PDFs zusammen, plant Aufgaben.</p>
+          <a href="employee.html" class="text-violet-400 mt-4 block font-medium hover:underline">Mehr erfahren →</a>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-violet-500/30 transition">
+          <h4 class="text-xl font-bold text-violet-300 mb-2">📧 Email AI Assistant</h4>
+          <p class="text-gray-400">Automatische Kundenkommunikation in Ihrem Stil.</p>
+          <a href="email.html" class="text-violet-400 mt-4 block font-medium hover:underline">Mehr erfahren →</a>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-violet-500/30 transition">
+          <h4 class="text-xl font-bold text-violet-300 mb-2">📱 Social Media AI</h4>
+          <p class="text-gray-400">Reels, Stories, Texte – von AI geplant und erstellt.</p>
+          <a href="social.html" class="text-violet-400 mt-4 block font-medium hover:underline">Mehr erfahren →</a>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-violet-500/30 transition">
+          <h4 class="text-xl font-bold text-violet-300 mb-2">🔎 Google Ads & SEO</h4>
+          <p class="text-gray-400">AI-generierte Kampagnen für Top-Sichtbarkeit.</p>
+          <a href="ads.html" class="text-violet-400 mt-4 block font-medium hover:underline">Mehr erfahren →</a>
+        </div>
+        <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-violet-500/30 transition">
+          <h4 class="text-xl font-bold text-violet-300 mb-2">📦 Full-Service Paket</h4>
+          <p class="text-gray-400">Alles aus einer Hand – AI, Ads, Voice, Mail.</p>
+          <a href="fullservice.html" class="text-violet-400 mt-4 block font-medium hover:underline">Mehr erfahren →</a>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="bg-zinc-900 py-24 px-6">
-      <div class="max-w-4xl mx-auto text-center">
-        <h3 class="text-3xl font-semibold text-violet-400 mb-6">Über AiMove</h3>
-        <p class="text-zinc-300 text-lg">
-          Wir sind eine Schweizer AI-Agentur, die sich auf Performance, Automatisierung und Marketing-Optimierung mit KI spezialisiert.
-          Unser Fokus: messbarer Mehrwert durch gezielte, intelligente Systeme – von Ads bis Email.
-        </p>
-      </div>
+    <section id="about" class="py-24 px-6 text-center max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold text-violet-400 mb-6">Über AiMove</h3>
+      <p class="text-gray-300 text-lg">
+        Wir sind eine Schweizer Agentur für künstliche Intelligenz und Performance-Automation. Unser Ziel ist es, Unternehmen in der Schweiz smarter, effizienter und digital erfolgreicher zu machen – mit intelligenter Automatisierung, AI-Tools und datenbasiertem Marketing.
+      </p>
     </section>
 
-    <!-- Contact CTA -->
-    <section id="contact" class="py-20 px-6 text-center">
-      <h3 class="text-3xl font-semibold text-violet-400">Starten Sie Ihr KI-Projekt</h3>
-      <p class="text-zinc-300 mt-4">Kontaktieren Sie uns für eine unverbindliche Beratung.</p>
-      <a href="mailto:hello@aimove.ch" class="mt-6 inline-block bg-violet-600 hover:bg-violet-700 text-white font-bold py-3 px-6 rounded-xl transition">Jetzt Kontakt aufnehmen</a>
+    <!-- Contact -->
+    <section id="contact" class="bg-[#0e0e0e] py-20 text-center">
+      <h3 class="text-3xl font-bold text-violet-400">Kontakt aufnehmen</h3>
+      <p class="text-gray-400 mt-4">Lassen Sie uns gemeinsam Ihre AI-Strategie planen.</p>
+      <a href="mailto:hello@aimove.ch" class="mt-6 inline-block text-violet-300 hover:underline text-lg font-medium">hello@aimove.ch</a>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-zinc-950 text-zinc-500 text-center text-sm py-8">
-      &copy; 2025 AiMove – Swiss AI Company. All rights reserved.
+    <footer class="text-center text-sm text-gray-500 py-6 border-t border-[#333]">
+      &copy; 2025 AiMove – Swiss AI Company
     </footer>
-
-    <script>
-      document.getElementById("lang-switch").addEventListener("change", (e) => {
-        if (e.target.value === "en") {
-          window.location.href = "/en.html";
-        } else {
-          window.location.href = "/index.html";
-        }
-      });
-    </script>
   </body>
 </html>
